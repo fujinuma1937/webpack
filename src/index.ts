@@ -1,2 +1,2 @@
-import "./ts/aho";
-console.log("あああ");
+import "./ts/sample1";
+import "./ts/sample2";
