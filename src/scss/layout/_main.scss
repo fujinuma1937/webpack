@@ -1,0 +1,35 @@
+@use '../foundation/mixin' as mi;
+@use '../foundation/variable' as va;
+
+.l-main {
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  &--question {
+    background-color: va.$color-pink;
+  }
+}
+
+@include mi.mq(pc) {
+  .l-main {
+    padding-top: 160px;
+    padding-bottom: 80px;
+    row-gap: 32px;
+    &--ticket {
+      row-gap: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@include mi.mq(sp) {
+  .l-main {
+    padding-top: 120px;
+    padding-bottom: 64px;
+    row-gap: 32px;
+    &--ticket {
+      row-gap: 0;
+      padding-bottom: 0;
+    }
+  }
+}

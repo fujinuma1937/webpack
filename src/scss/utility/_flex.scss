@@ -1,0 +1,93 @@
+@use '../foundation/mixin' as mi;
+@use '../foundation/variable' as va;
+
+.u-flex {
+  &--column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &--row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &--row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &--button {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+@include mi.mq(pc) {
+  .u-flex {
+    &--PC {
+      &--column {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &--column-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      &--row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      &--row-reverse {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    }
+
+    &--button {
+      align-items: center;
+      column-gap: 64px;
+    }
+  }
+}
+
+@include mi.mq(sp) {
+  .u-flex {
+    &--SP {
+      &--column {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &--column-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      &--row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      &--row-reverse {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    }
+
+    &--button {
+      align-items: center;
+      flex-direction: column;
+      row-gap: 16px;
+    }
+  }
+}

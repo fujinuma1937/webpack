@@ -1,0 +1,388 @@
+@use '../foundation/mixin' as mi;
+@use '../foundation/variable' as va;
+
+.u-gap {
+  &--2 {
+    gap: 2px;
+  }
+
+  &--4 {
+    gap: 4px;
+  }
+
+  &--8 {
+    gap: 8px;
+  }
+
+  &--16 {
+    gap: 16px;
+  }
+
+  &--24 {
+    gap: 24px;
+  }
+
+  &--32 {
+    gap: 32px;
+  }
+
+  &--40 {
+    gap: 40px;
+  }
+
+  &--48 {
+    gap: 48px;
+  }
+
+  &--56 {
+    gap: 56px;
+  }
+
+  &--64 {
+    gap: 64px;
+  }
+
+  &--row {
+    &--2 {
+      row-gap: 2px;
+    }
+
+    &--4 {
+      row-gap: 4px;
+    }
+
+    &--8 {
+      row-gap: 8px;
+    }
+
+    &--16 {
+      row-gap: 16px;
+    }
+
+    &--24 {
+      row-gap: 24px;
+    }
+
+    &--32 {
+      row-gap: 32px;
+    }
+
+    &--40 {
+      row-gap: 40px;
+    }
+
+    &--48 {
+      row-gap: 48px;
+    }
+
+    &--56 {
+      row-gap: 56px;
+    }
+
+    &--64 {
+      row-gap: 64px;
+    }
+  }
+
+  &--column {
+    &--2 {
+      column-gap: 2px;
+    }
+
+    &--4 {
+      column-gap: 4px;
+    }
+
+    &--8 {
+      column-gap: 8px;
+    }
+
+    &--16 {
+      column-gap: 16px;
+    }
+
+    &--24 {
+      column-gap: 24px;
+    }
+
+    &--32 {
+      column-gap: 32px;
+    }
+
+    &--40 {
+      column-gap: 40px;
+    }
+
+    &--48 {
+      column-gap: 48px;
+    }
+
+    &--56 {
+      column-gap: 56px;
+    }
+
+    &--64 {
+      column-gap: 64px;
+    }
+  }
+}
+
+@include mi.mq(pc) {
+  .u-gap {
+    &--PC {
+      &--2 {
+        gap: 2px;
+      }
+
+      &--4 {
+        gap: 4px;
+      }
+
+      &--8 {
+        gap: 8px;
+      }
+
+      &--16 {
+        gap: 16px;
+      }
+
+      &--24 {
+        gap: 24px;
+      }
+
+      &--32 {
+        gap: 32px;
+      }
+
+      &--40 {
+        gap: 40px;
+      }
+
+      &--48 {
+        gap: 48px;
+      }
+
+      &--56 {
+        gap: 56px;
+      }
+
+      &--64 {
+        gap: 64px;
+      }
+
+      &--row {
+        &--2 {
+          row-gap: 2px;
+        }
+
+        &--4 {
+          row-gap: 4px;
+        }
+
+        &--8 {
+          row-gap: 8px;
+        }
+
+        &--16 {
+          row-gap: 16px;
+        }
+
+        &--24 {
+          row-gap: 24px;
+        }
+
+        &--32 {
+          row-gap: 32px;
+        }
+
+        &--40 {
+          row-gap: 40px;
+        }
+
+        &--48 {
+          row-gap: 48px;
+        }
+
+        &--56 {
+          row-gap: 56px;
+        }
+
+        &--64 {
+          row-gap: 64px;
+        }
+      }
+
+      &--column {
+        &--2 {
+          column-gap: 2px;
+        }
+
+        &--4 {
+          column-gap: 4px;
+        }
+
+        &--8 {
+          column-gap: 8px;
+        }
+
+        &--16 {
+          column-gap: 16px;
+        }
+
+        &--24 {
+          column-gap: 24px;
+        }
+
+        &--32 {
+          column-gap: 32px;
+        }
+
+        &--40 {
+          column-gap: 40px;
+        }
+
+        &--48 {
+          column-gap: 48px;
+        }
+
+        &--56 {
+          column-gap: 56px;
+        }
+
+        &--64 {
+          column-gap: 64px;
+        }
+      }
+    }
+  }
+}
+
+@include mi.mq(sp) {
+  .u-gap {
+    &--SP {
+      &--2 {
+        gap: 2px;
+      }
+
+      &--4 {
+        gap: 4px;
+      }
+
+      &--8 {
+        gap: 8px;
+      }
+
+      &--16 {
+        gap: 16px;
+      }
+
+      &--24 {
+        gap: 24px;
+      }
+
+      &--32 {
+        gap: 32px;
+      }
+
+      &--40 {
+        gap: 40px;
+      }
+
+      &--48 {
+        gap: 48px;
+      }
+
+      &--56 {
+        gap: 56px;
+      }
+
+      &--64 {
+        gap: 64px;
+      }
+
+      &--row {
+        &--2 {
+          row-gap: 2px;
+        }
+
+        &--4 {
+          row-gap: 4px;
+        }
+
+        &--8 {
+          row-gap: 8px;
+        }
+
+        &--16 {
+          row-gap: 16px;
+        }
+
+        &--24 {
+          row-gap: 24px;
+        }
+
+        &--32 {
+          row-gap: 32px;
+        }
+
+        &--40 {
+          row-gap: 40px;
+        }
+
+        &--48 {
+          row-gap: 48px;
+        }
+
+        &--56 {
+          row-gap: 56px;
+        }
+
+        &--64 {
+          row-gap: 64px;
+        }
+      }
+
+      &--column {
+        &--2 {
+          column-gap: 2px;
+        }
+
+        &--4 {
+          column-gap: 4px;
+        }
+
+        &--8 {
+          column-gap: 8px;
+        }
+
+        &--16 {
+          column-gap: 16px;
+        }
+
+        &--24 {
+          column-gap: 24px;
+        }
+
+        &--32 {
+          column-gap: 32px;
+        }
+
+        &--40 {
+          column-gap: 40px;
+        }
+
+        &--48 {
+          column-gap: 48px;
+        }
+
+        &--56 {
+          column-gap: 56px;
+        }
+
+        &--64 {
+          column-gap: 64px;
+        }
+      }
+    }
+  }
+}

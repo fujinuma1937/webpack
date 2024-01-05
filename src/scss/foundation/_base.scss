@@ -1,0 +1,117 @@
+@use './mixin' as mi;
+@use './variable' as va;
+
+._2p3a {
+  width: 100% !important;
+}
+
+// スクロール調整
+html {
+  scroll-behavior: smooth;
+}
+
+@include mi.mq(pc) {
+  :target {
+    scroll-margin-top: 80px;
+  }
+}
+
+body {
+  color: va.$color-black;
+  background-color: va.$color-white;
+  font-size: 16px;
+  font-family: 'Source Serif 4', 'Shippori Mincho', 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+
+  ::-webkit-scrollbar-track {
+    background-color: #c5c5c5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: va.$color-black;
+  }
+
+  ::placeholder {
+    color: #888888;
+  }
+
+  input:focus {
+    background: #e3ffff;
+  }
+
+  // select:invalid { 
+  //   color: #cdcdcd; 
+  // }
+}
+
+@include mi.mq(pc) {
+  body {
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+    }
+  }
+}
+
+@include mi.mq(sp) {
+  body {
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+    }
+  }
+}
+
+img {
+  object-fit: cover;
+  display: block;
+}
+
+//PC,tab,spの表示切替
+@include mi.mq(pc) {
+  .if-pc {
+    display: block;
+  }
+
+  .if-tab {
+    display: none !important;
+  }
+
+  .if-sp {
+    display: none !important;
+  }
+}
+
+@include mi.mq(tab) {
+  .if-pc {
+    display: block;
+  }
+
+  .if-tab {
+    display: block;
+  }
+
+  .if-sp {
+    display: none !important;
+  }
+}
+
+@include mi.mq(sp) {
+  .if-pc {
+    display: none !important;
+  }
+
+  .if-tab {
+    display: none !important;
+  }
+
+  .if-sp {
+    display: block;
+  }
+}

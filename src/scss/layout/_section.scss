@@ -1,0 +1,61 @@
+@use '../foundation/mixin' as mi;
+@use '../foundation/variable' as va;
+
+.l-section {
+  display: flex;
+  flex-direction: column;
+  &--background {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    &--1 {
+      // background-image: url('@image/background-top--1.jpg');
+      background-image: url('@image/background-top--1--dark.jpg');
+    }
+    &--2 {
+      background-image: url('@image/background-top--2.jpg');
+    }
+    &--3 {
+      background-image: url('@image/background-top--3.jpg');
+    }
+  }
+}
+
+@include mi.mq(pc) {
+  .l-section {
+    row-gap: 64px;
+    &--background {
+      &--1 {
+        background-position-y: 30%;
+        background-size: 120%;
+      }
+      &--2 {
+        background-position-y: 3%;
+        background-size: 120%;
+      }
+      &--3 {
+        background-position-y: 52%;
+        background-size: 130%;
+      }
+    }
+  }
+}
+
+@include mi.mq(sp) {
+  .l-section {
+    row-gap: 24px;
+    &--background {
+      &--1 {
+        background-size: 390%;
+        background-position: 50% 0%;
+      }
+      &--2 {
+        background-size: cover;
+        background-position: 87% 0%;
+      }
+      &--3 {
+        background-size: cover;
+        background-position: 70% 0%;
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+@use '../foundation/mixin' as mi;
+@use '../foundation/variable' as va;
+
+.u-text {
+  &--link {
+    color: va.$color-link;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  &--italic{
+    font-style: italic;
+  }
+
+  &--cursor {
+    cursor: pointer;
+  }
+
+  &--no-wrap {
+    white-space: nowrap;
+  }
+
+  &--pre-wrap{
+    white-space: pre-wrap;
+  }
+
+  &--false{
+    pointer-events: none;
+    color: #b3b3b3;
+  }
+
+  &--new-tab {
+    &:after {
+      content: '\f08e';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      vertical-align: middle;
+      margin-left: 0.5em;
+    }
+  }
+
+  &--noto {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  &--mincho {
+    font-family: 'Shippori Mincho', sans-serif;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--brown {
+    color: va.$color-brown;
+  }
+
+  &--black {
+    color: va.$color-black;
+  }
+
+  &--white {
+    color: va.$color-white;
+  }
+
+  &--blue {
+    color: va.$color-blue;
+  }
+
+  &--red {
+    color: va.$color-red;
+  }
+
+  &--purple{
+    color: #900071;
+  }
+
+  &--border-bottom{
+    text-decoration: underline;
+  }
+
+  &--italic{
+    font-style: italic;
+  }
+
+  &--under-line{
+    border-bottom: 1px solid va.$color-black;
+  }
+}
+
+@include mi.mq(pc) {
+  .u-text {
+    &--large {
+      font-size: 20px;
+    }
+
+    &--small {
+      font-size: 14px;
+    }
+
+    &--PC {
+      &--center {
+        text-align: center;
+      }
+
+      &--right {
+        text-align: right;
+      }
+
+      &--left {
+        text-align: left;
+      }
+
+      &--small {
+        font-size: 14px;
+      }
+
+      &--normal {
+        font-size: 16px;
+      }
+
+      &--large {
+        font-size: 18px;
+      }
+      &--no-wrap {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@include mi.mq(sp) {
+  .u-text {
+    &--large {
+      font-size: 18px;
+    }
+
+    &--small {
+      font-size: 14px;
+    }
+
+    &--SP {
+      &--center {
+        text-align: center;
+      }
+
+      &--right {
+        text-align: right;
+      }
+
+      &--left {
+        text-align: left;
+      }
+
+      &--small {
+        font-size: 14px;
+      }
+
+      &--normal {
+        font-size: 16px;
+      }
+
+      &--large {
+        font-size: 18px;
+      }
+      &--no-wrap {
+        white-space: nowrap;
+      }
+    }
+  }
+}

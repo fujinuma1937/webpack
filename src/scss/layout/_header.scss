@@ -1,0 +1,7 @@
+@use '../foundation/mixin' as mi;
+@use '../foundation/variable' as va;
+
+.l-header {
+  transition: all 0.6s ease;
+  z-index: 999999;
+}

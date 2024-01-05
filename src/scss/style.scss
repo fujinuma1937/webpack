@@ -1,0 +1,29 @@
+// 基本
+@use './foundation/reset';
+@use './foundation/variable';
+@use './foundation/mixin';
+@use './foundation/base';
+@use './foundation/vue-setting';
+@use './foundation/swiper';
+
+// レイアウト(全ページ共通で使うもの)
+@use './layout/header';
+// @use './layout/footer';
+// @use './layout/main';
+// @use './layout/section';
+
+// プロジェクト
+// トップページ
+@use './object/project/main-visual';
+
+// コンポーネント
+@use './object/compornent/title';
+
+// ユーティリティ
+@use './utility/margin';
+@use './utility/padding';
+@use './utility/text';
+@use './utility/display';
+@use './utility/animation';
+@use './utility/flex';
+@use './utility/gap';

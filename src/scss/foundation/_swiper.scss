@@ -1,0 +1,158 @@
+@use './mixin' as mi;
+@use './variable' as va;
+
+.swiper-container {
+  position: relative;
+}
+/* スライドの動き等速 */
+.swiper-wrapper {
+  &--top {
+    transition-timing-function: linear !important;
+  }
+}
+/* 画像のサイズ調整 */
+.swiper-image {
+  height: auto;
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: var(--swiper-navigation-top-offset, 55%) !important;
+}
+.swiper-button-prev {
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+.swiper-button-next {
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+/*　デフォルトのページネーションを消す */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none !important;
+}
+
+.swiper-title {
+  color: va.$color-white;
+  text-align: center;
+  &--ticket {
+    background-color: #cc7db1;
+  }
+}
+
+@include mi.mq(pc) {
+  .swiper {
+    &--top {
+      margin-top: 120px;
+    }
+    &--ticket {
+      max-width: va.$contents-width;
+    }
+  }
+  .swiper-container {
+    max-width: va.$contents-width;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .swiper-slide {
+    &--ticket {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+  .swiper-image {
+    &--top {
+      aspect-ratio: 3/2;
+    }
+    &--ticket {
+      aspect-ratio: 3/2;
+    }
+  }
+  .swiper-button-prev {
+    height: calc(tan(60deg) * 42px / 2) !important;
+    width: 32px !important;
+    left: var(--swiper-navigation-sides-offset, -3%) !important;
+  }
+  .swiper-button-next {
+    height: calc(tan(60deg) * 42px / 2) !important;
+    width: 32px !important;
+    right: var(--swiper-navigation-sides-offset, -3%) !important;
+  }
+  .swiper-title {
+    font-size: 16px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cc7db1;
+    background-color: va.$color-white;
+    font-weight: 800;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    &--ticket {
+      background: va.$color-white;
+    }
+  }
+}
+
+@include mi.mq(tab) {
+  .swiper-button-prev {
+    height: calc(tan(60deg) * 32px / 2) !important;
+    width: 24px !important;
+    left: var(--swiper-navigation-sides-offset, -3%) !important;
+  }
+  .swiper-button-next {
+    height: calc(tan(60deg) * 32px / 2) !important;
+    width: 24px !important;
+    right: var(--swiper-navigation-sides-offset, -3%) !important;
+  }
+  .swiper-title {
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+@include mi.mq(sp) {
+  .swiper {
+    &--top {
+      margin-top: 80px;
+    }
+  }
+  .swiper-image {
+    &--top {
+      aspect-ratio: 3/2;
+    }
+    &--ticket {
+      aspect-ratio: 3/2;
+    }
+  }
+  .swiper-button-prev {
+    height: calc(tan(60deg) * 20px / 2);
+    width: 20px !important;
+    left: var(--swiper-navigation-sides-offset, 3%) !important;
+  }
+  .swiper-button-next {
+    height: calc(tan(60deg) * 20px / 2);
+    width: 20px !important;
+    right: var(--swiper-navigation-sides-offset, 3%) !important;
+  }
+  .swiper-title {
+    font-size: 16px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cc7db1;
+    background-color: va.$color-white;
+    font-weight: 800;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    &--ticket {
+      background: #cc7db1;
+    }
+  }
+}

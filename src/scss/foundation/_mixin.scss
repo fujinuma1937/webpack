@@ -1,0 +1,8 @@
+@use './variable' as va;
+
+/*ブレークポイント*/
+@mixin mq($bp) {
+  @media #{map-get(va.$breakpoint,$bp)} {
+    @content;
+  }
+}

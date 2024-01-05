@@ -1,0 +1,82 @@
+@use '../foundation/mixin' as mi;
+@use '../foundation/variable' as va;
+
+.u-display {
+  &--false {
+    pointer-events: none;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 14px;
+      color: va.$color-white;
+      content: 'Coming Soon';
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: va.$color-black, $alpha: 0.6);
+    }
+  }
+}
+
+@include mi.mq(pc) {
+  .u-display {
+    &--PC {
+      display: block;
+    }
+
+    &--TAB {
+      display: none;
+    }
+
+    &--SP {
+      display: none;
+    }
+    &__text {
+      &--SP {
+        display: none;
+      }
+    }
+  }
+}
+
+@include mi.mq(tab) {
+  .u-display {
+    &--PC {
+      display: block;
+    }
+
+    &--TAB {
+      display: block;
+    }
+
+    &--SP {
+      display: none;
+    }
+  }
+}
+
+@include mi.mq(sp) {
+  .u-display {
+    &--PC {
+      display: none;
+    }
+
+    &--TAB {
+      display: none;
+    }
+
+    &--SP {
+      display: block;
+    }
+    &__text {
+      &--PC {
+        display: none;
+      }
+    }
+  }
+}
